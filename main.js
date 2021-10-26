@@ -44,12 +44,11 @@ for (i = 0; i < nav_links.length; i++) {
 
 
 
-window.addEventListener('scroll',(e)=>{
+window.addEventListener('scroll',()=>{
   let current = '';
   sections.forEach( section => {
-    const sectionTop = section.offsetLeft;
-    const sectionwidth = section.clientWidth;
-    if(pageXOffset >= sectionTop){
+    const sectionLeft = section.offsetLeft;
+    if(pageXOffset >= sectionLeft*0.6){
       current = section.getAttribute('id');
     }
   });

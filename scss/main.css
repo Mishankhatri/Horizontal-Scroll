@@ -65,7 +65,7 @@ nav ul {
           flex-flow: row wrap;
 }
 
-nav li > a {
+nav ul li > a {
   text-decoration: none;
   color: white;
   font-family: "poppins", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -75,16 +75,25 @@ nav li > a {
   border-color: white;
 }
 
+nav ul li > a.active {
+  color: darkslategray;
+  border-color: darkslategray;
+}
+
 .row {
   position: relative;
   width: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: -1;
+  z-index: -10;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
 }
 
 .row .section {
+  pointer-events: none;
   position: relative;
   min-width: 100%;
   height: 100vh;
@@ -103,7 +112,7 @@ nav li > a {
           flex-flow: row wrap;
   top: 0;
   z-index: -1;
-  margin: collapse;
+  scroll-snap-align: start;
 }
 
 .row .section .image img {
@@ -113,21 +122,30 @@ nav li > a {
      object-fit: cover;
 }
 
-.row .section a.next {
-  position: relative;
-  z-index: 10;
-  bottom: 5rem;
-  left: 35%;
+.row button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-.row .section a.previous {
-  position: relative;
-  z-index: 10;
-  bottom: 5rem;
-  left: 30%;
+.row button.back {
+  position: fixed;
+  z-index: 20;
+  bottom: 3rem;
+  left: 80%;
+  padding-right: 20px;
 }
 
-.row .section a > img {
+.row button.next {
+  position: fixed;
+  z-index: 20;
+  bottom: 3rem;
+  left: 85%;
+  padding-left: 20px;
+}
+
+.row button > img {
+  z-index: 30;
   width: 3rem;
 }
 /*# sourceMappingURL=main.css.map */

@@ -18,13 +18,18 @@ nav {
     list-style: none;
     width: 60%;
     @include flex(space-around);
+
+    li > a {
+      text-decoration: none;
+      color: $primary-color;
+      @include font(1rem, 400);
+      border-bottom: 0.15rem solid;
+      border-color: $primary-color;
+      &.active{
+        color:$secondary-color;
+        border-color: $secondary-color;
+      }
+    }
   }
 
-  li > a {
-    text-decoration: none;
-    color: $primary-color;
-    @include font(1rem, 400);
-    border-bottom: 0.15rem solid;
-    border-color: $primary-color;
-  }
 }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizontal</title>
+    <link rel="stylesheet" href="./scss/main.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="#Forest"><img src="./images/logowhite.svg" alt="" /></a>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#Forest" class="nav-link">Forest</a></li>
+        <li class="nav-item"><a href="#Winter" class="nav-link">River</a></li>
+        <li class="nav-item"><a href="#City" class="nav-link">City</a></li>
+      </ul>
+    </nav>
+
+    <div class="row">
+      <div class="section" id="Forest">
+        <div class="image">
+          <img src="./images/mountains.jpg" alt="natural-landscape" />
+        </div>
+        <a href="#City" class="previous"
+          >Lets</a>
+        <a href="#Winter" class="next"
+          ><img src="./images/next.png" alt="next"
+        /></a>
+      </div>
+
+      <div class="section" id="Winter">
+        <div class="image">
+          <img src="./images/river.jpg" alt="natural-landscape" />
+        </div>
+        <a href="#Forest" class="previous"
+          ><img src="./images/back.png" alt="back"
+        /></a>
+        <a href="#City" class="next"
+          ><img src="./images/next.png" alt="next"
+        /></a>
+      </div>
+
+      <div class="section" id="City">
+        <div class="image">
+          <img src="./images/city.jpg" alt="natural-landscape" />
+        </div>
+        <a href="#Winter" class="previous"
+          ><img src="./images/back.png" alt="back"
+        /></a>
+        <a href="#Forest" class="next"
+          ><img src="./images/next.png" alt="next"
+        /></a>
+      </div>
+    </div>
+  </body>
+
+  <script src="./main.js"></script>
+</html>

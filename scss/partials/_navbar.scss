@@ -1,0 +1,30 @@
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: transparent;
+  @include flex(space-between);
+
+  .logo {
+    padding-left: 3rem;
+    padding-top:0.5rem;
+    img {
+      width: 60px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    width: 60%;
+    @include flex(space-around);
+  }
+
+  li > a {
+    text-decoration: none;
+    color: $primary-color;
+    @include font(1rem, 400);
+    border-bottom: 0.15rem solid;
+    border-color: $primary-color;
+  }
+}

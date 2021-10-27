@@ -1,12 +1,10 @@
 const nav_links = document.querySelectorAll(".nav-link");
 const sections = document.querySelectorAll(".section");
-console.log(nav_links);
 
 const back_button = document.querySelector("button.back");
 const next_button = document.querySelector("button.next");
 
 window.addEventListener("keydown", function (event) {
-  const key = event.key;
   switch (event.key) {
     case "ArrowLeft":
       window.scrollBy(-window.innerWidth, 0);
@@ -48,11 +46,10 @@ window.addEventListener('scroll',()=>{
   let current = '';
   sections.forEach( section => {
     const sectionLeft = section.offsetLeft;
-    if(pageXOffset >= sectionLeft*0.6){
+    if(scrollX >= sectionLeft*0.6){
       current = section.getAttribute('id');
     }
   });
-  console.log(current);
   nav_links.forEach( li =>{
     li.classList.remove('active');
     if(li.classList.contains(current)) li.classList.add("active");

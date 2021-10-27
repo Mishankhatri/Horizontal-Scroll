@@ -16,6 +16,8 @@ body {
 html {
   scroll-behavior: smooth;
   scrollbar-width: none;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
 }
 
 nav {
@@ -88,8 +90,6 @@ nav ul li > a.active {
   display: -ms-flexbox;
   display: flex;
   z-index: auto;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
 }
 
 .row .section {
